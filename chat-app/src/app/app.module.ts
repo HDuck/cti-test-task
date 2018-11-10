@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { ChatComponent } from './chat/chat.component';
 
+import { PusherService } from './pusher.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -12,7 +14,7 @@ import { ChatComponent } from './chat/chat.component';
   imports: [
     BrowserModule
   ],
-  providers: [],
+  providers: [PusherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
