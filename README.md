@@ -23,4 +23,4 @@ https://hduck.github.io/cti-test-task/
 
 ## Использованные технологии
 
-Angular 7, Express.js, Pusher, Typescript.
+Angular 7, Express.js, Pusher, Typescript, Bootstrap 4.
