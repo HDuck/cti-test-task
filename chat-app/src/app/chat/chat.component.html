@@ -1,9 +1,19 @@
-<div class="w-75 mx-auto chat-cont d-flex flex-column justify-content-start align-items-stretch flex-wrap">
-  <div class="mb-2 bg-white rounded border"></div>
+<div class="w-75 mx-auto mt-2 chat-cont d-flex flex-column justify-content-start align-items-stretch flex-wrap">
+  <div class="input-group w-50 mx-auto">
+    <div class="input-group-prepend">
+      <span class="input-group-text" id="basic-addon1">Username:</span>
+    </div>
+    <input type="text" class="form-control" placeholder="Name yourself.." aria-label="Username" aria-describedby="basic-addon1" #user>
+  </div>
+  <div class="my-2 bg-white rounded border">
+    <div *ngFor="let message of messages">
+      <b>{{ message.user }}</b>: {{ message.text }}
+    </div>
+  </div>
   <div class="input-group">
-    <input type="text" class="form-control" placeholder="Type a msg.." aria-label="message" aria-describedby="message-input">
+    <input type="text" class="form-control" placeholder="Type a msg.."aria-label="message" aria-describedby="message-input" #message>
     <div class="input-group-append w-25">
-      <button type="button" class="w-100 btn btn-primary" id="message-input">Send</button>
+      <button type="button" class="w-100 btn btn-primary" id="message-input" (click)="sendMessage(user.value, message.value); message.value = '';">Send</button>
     </div>
   </div>
 </div>

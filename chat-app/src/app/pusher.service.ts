@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { environment } from '../environments/environment';
 
 declare const Pusher: any;
 
@@ -10,8 +11,10 @@ export class PusherService {
   messagesChannel: any;
 
   constructor() {
-    this.pusher = new Pusher('73b94b7fcdea15ec5ad5', {
-      authEndpoint: 'http://localhost:3000/pusher/auth',
+    this.pusher = new Pusher(environment.pusher.key, {
+      cluster: 'eu',
+      forceTLS: true,
+      authEndpoint: 'http://localhost:3000/pusher/auth'
     });
     this.messagesChannel = this.pusher.subscribe('private-messages');
   }
