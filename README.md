@@ -2,7 +2,7 @@
 
 ## Описание
 
-Сделать чат-приложение на Angular с сервером.
+Сделать чат-приложение на Angular любой версии с сервером.
 
 ## Запуск с локального репозитория
 
@@ -17,7 +17,7 @@ ng serve --open
 
 ## Ссылка на GitHub Pages
 
-https://hduck.github.io/cti-test-task/
+[ChatApp](https://hduck.github.io/cti-test-task/)
 
 Серверная часть, к сожалению, не работает на GitHub Pages.
 
